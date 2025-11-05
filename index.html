@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student Feedback</title>
+</head>
+<body>
+  <h2>Student Feedback Form</h2>
+  <form action="submit.php" method="post">
+    <label>Name:</label><br>
+    <input type="text" name="name" required><br><br>
+
+    <label>Email:</label><br>
+    <input type="email" name="email" required><br><br>
+
+    <label>Course:</label><br>
+    <input type="text" name="course" required><br><br>
+
+    <label>Feedback:</label><br>
+    <textarea name="feedback" required></textarea><br><br>
+
+    <input type="submit" value="Submit Feedback">
+<br>
+<a href="view_feedback.php">
+  <button type="button">View Feedbacks</button>
+</a>
+
+  </form>
+</body>
+</html>
