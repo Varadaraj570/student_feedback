@@ -23,8 +23,7 @@ This project is a **Student Feedback System** that allows students to submit fee
 http://localhost/your_project_folder/
 6. Use the feedback form to submit and view feedback.
 
-## Screenshots
-*(Add screenshots of your feedback form and submission page here)*
+
 
 ## Author
 Varadaraj 
