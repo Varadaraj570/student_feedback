@@ -1,29 +1,61 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Student Feedback</title>
+    <meta charset="UTF-8">
+    <title>Student Feedback System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #eef3f9;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 400px;
+            margin: 80px auto;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+        h2 { text-align: center; color: #333; }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #aaa;
+            border-radius: 5px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover { background: #0056b3; }
+    </style>
 </head>
 <body>
-  <h2>Student Feedback Form</h2>
-  <form action="submit.php" method="post">
-    <label>Name:</label><br>
-    <input type="text" name="name" required><br><br>
+<div class="container">
+    <h2>Student Feedback Form</h2>
+    <form action="submit.php" method="post">
+        <label>Name:</label>
+        <input type="text" name="student_name" required>
 
-    <label>Email:</label><br>
-    <input type="email" name="email" required><br><br>
+        <label>Email:</label>
+        <input type="email" name="email">
 
-    <label>Course:</label><br>
-    <input type="text" name="course" required><br><br>
+        <label>Subject:</label>
+        <input type="text" name="subject" required>
 
-    <label>Feedback:</label><br>
-    <textarea name="feedback" required></textarea><br><br>
+        <label>Feedback:</label>
+        <textarea name="message" rows="4" required></textarea>
 
-    <input type="submit" value="Submit Feedback">
-<br>
-<a href="view_feedback.php">
-  <button type="button">View Feedbacks</button>
-</a>
-
-  </form>
+        <button type="submit">Submit Feedback</button>
+    </form>
+</div>
 </body>
 </html>
