@@ -5,24 +5,22 @@ $password = "";
 $dbname = "feedback_db";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
-
 if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
+    die("Connection failed: " . $conn->connect_error);
 }
 
-$name = $_POST['name'];
+$student_name = $_POST['student_name'];
 $email = $_POST['email'];
-$course = $_POST['course'];
-$feedback = $_POST['feedback'];
+$subject = $_POST['subject'];
+$message = $_POST['message'];
 
-$sql = "INSERT INTO feedback (name, email, course, feedback)
-        VALUES ('$name', '$email', '$course', '$feedback')";
+$sql = "INSERT INTO feedback (student_name, email, subject, message)
+        VALUES ('$student_name', '$email', '$subject', '$message')";
 
 if ($conn->query($sql) === TRUE) {
-  echo "<h2>Thank you for your feedback!</h2>";
-  echo "<a href='index.html'>Go Back</a>";
+    echo "<script>alert('Thank you for your feedback!');window.location='index.html';</script>";
 } else {
-  echo "Error: " . $sql . "<br>" . $conn->error;
+    echo "Error: " . $sql . "<br>" . $conn->error;
 }
 
 $conn->close();
